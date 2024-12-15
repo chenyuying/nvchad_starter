@@ -13,6 +13,13 @@ return {
     end,
   },
 
+  -- For Rust
+  {
+    'mrcjkb/rustaceanvim',
+    version = '^5', -- Recommended
+    lazy = false, -- This plugin is already lazy
+  },
+
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
@@ -22,4 +29,22 @@ return {
   -- 		},
   -- 	},
   -- },
+  {
+    "sindrets/diffview.nvim",
+  },
+
+  require("plugins.hop"),
+  require("plugins.hardtime"),
+
+  require('gitsigns').setup {
+    current_line_blame = true,
+    current_line_blame_opts = {
+      virt_text = true,
+      virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+      delay = 300,
+      ignore_whitespace = false,
+      virt_text_priority = 100,
+      use_focus = true,
+    }
+  },
 }
