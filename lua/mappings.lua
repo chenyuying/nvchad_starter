@@ -4,7 +4,13 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
+-- map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
+
+map("n", " ", "<pageDown>")
+map("n", "<S- >", "<pageUp>")
+map("n", ";", ":b#<CR>")
+
+map("n", "<C-P>", "<cmd>Telescope find_files<CR>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
